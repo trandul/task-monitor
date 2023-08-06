@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import React  from 'react';
+import { Chart } from './Chart/Chart';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +20,11 @@ function App() {
         >
           Learn React
         </a>
+        
       </header>
+      <body>
+        <Chart />
+      </body>
     </div>
   );
 }
