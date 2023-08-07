@@ -1,4 +1,9 @@
 .bar-wrapper{
+    display: grid;
+    grid-template-columns: ();
+    border: 3px solid #666;
     background-color: aqua;
-    width: 50px;
+    cursor: move;
+    height: 50px;
+    z-index: 1000;
 }
