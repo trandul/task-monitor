@@ -1,8 +1,9 @@
 .chart-wrapper{
-    position: relative;
-    flex-grow: 1;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    /* position: relative;
+    flex-grow: 1; */
     border: 1px solid green;
     background-color: silver;
     width: 100%;
-    overflow-x: auto;
 }

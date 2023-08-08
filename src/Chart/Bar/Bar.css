@@ -1,9 +1,8 @@
 .bar-wrapper{
     display: grid;
-    grid-template-columns: ();
+    grid-template-columns: 1fr 4fr 1fr;
     border: 3px solid #666;
     background-color: aqua;
-    cursor: move;
     height: 50px;
-    z-index: 1000;
+    z-index: 1;
 }
