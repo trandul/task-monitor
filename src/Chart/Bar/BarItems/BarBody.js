@@ -17,10 +17,12 @@ export const BarBody=({dragHandler})=>{
             //onDragStart={e=>onDrag(e)}
             //cursor: move;
             style={{
-                cursor: 'move'
+                cursor: 'move',
+                padding: '0 0 0 0'
             }} 
             draggable="false" 
             >
+                <h2>Название задачи</h2>
         </div>
     );
 }

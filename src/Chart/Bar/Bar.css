@@ -1,6 +1,6 @@
 .bar-wrapper{
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 10px 4fr 10px;
     border: 3px solid #666;
     background-color: aqua;
     height: 50px;

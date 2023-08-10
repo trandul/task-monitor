@@ -7,21 +7,24 @@ export const SizeMarker=({resizeHandler})=>{
     const[_startPos,setStartPos] = useState(80);
     const onResize=(e)=>{
         if (resize){
-            resizeHandler(e.pageX-startPoint);
-            setWidth(e.pageX-startPoint);
-            console.log("pg = " + e.pageX);
-            
-            console.log("sp = " + startPoint);
+            resizeHandler(286 + (e.pageX - startPoint - e.target.offsetWidth/2));
+            setWidth(e.target.parentElement.offsetWidth);
         }
+    }
+    const echo=(e)=>{
+        console.log("pg = " + e.pageX);
+        console.log("wh = " + e.target.parentElement.offsetWidth);
+        console.log("sp = " + startPoint);
+        console.log("total = "+( e.pageX - startPoint+_width));
     }
     return(
         <div 
-            onPointerDown={e=>{setResize(true); setStartPoint(e.clientX-e.target.parentElement.getBoundingClientRect().left);console.log(resize);}}
-            onPointerUp={()=>{setResize(false);console.log(resize);}}
+            onPointerDown={e=>{setResize(true); echo(e); setStartPoint(e.clientX-e.target.parentElement.getBoundingClientRect().left);}}
+            onPointerUp={(e)=>{setResize(false);console.log(resize);echo(e);}}
             onPointerMove={e=>onResize(e)}
-            //className="chart-bar-size-marker"
+            onPointerLeave={()=>setResize(false)}
             style={{
-                //cursor:'e-resize'
+                cursor:'e-resize',
                 background: 'red'
             }} 
             >
